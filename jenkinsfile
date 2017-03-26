@@ -1,6 +1,5 @@
 pipeline {
   agent none
-
   stages {
     stage('Unit Tests') {
       agent {
@@ -10,7 +9,6 @@ pipeline {
         sh 'ant -f test.xml -v'
         junit 'report/result.xml'
       }
-
     }
     stage('build') {
       agent {
@@ -32,14 +30,12 @@ pipeline {
       agent {
         label 'CentOS'
       }
-      }steps {
+      steps {
         sh "wget http://hzhang08023.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
         sh "jave -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
       }
-
     }
   }
-
   post {
     always {
       archiveArtifacts artifacts: 'dist/*.jar', fingerprint : true
