@@ -14,7 +14,7 @@ pipeline {
     }
     stage('build') {
       agent {
-        'apache'
+        label 'apache'
       }
       steps {
         sh 'ant -f build.xml -v'
