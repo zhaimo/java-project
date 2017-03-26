@@ -31,6 +31,7 @@ pipeline {
     stage('Running on CentOS') {
       agent {
         label 'CentOS'
+      }
       }steps {
         sh "wget http://hzhang08023.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
         sh "jave -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
