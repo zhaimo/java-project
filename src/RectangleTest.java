@@ -15,11 +15,11 @@ public class RectangleTest {
   }
   @Test
     public void testLength() {
-      assertEquals(myRectangle.Length(), 5);
+      assertEquals(myRectangle.length(), 5);
   }
   @Test
     public void testWidth() {
-      assertEquals(myRectangle.Width(), 6);
+      assertEquals(myRectangle.width(), 6);
   }
 
 }
