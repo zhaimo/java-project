@@ -2,16 +2,16 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class RectangleTest {
-  Rectangle myRectangle = new Rectangle(5, 6);
+  Rectangle myRectangle = new Rectangle(5, 8);
 
   @Test
   public void testGetArea() {
-    assertEquals(myRectangle.getArea(), 30);
+    assertEquals(myRectangle.getArea(), 40);
   }
 
   @Test
     public void testGetPerimeter() {
-      assertEquals(myRectangle.getPerimeter(), 22);
+      assertEquals(myRectangle.getPerimeter(), 26);
   }
   @Test
     public void testLength() {
@@ -19,7 +19,7 @@ public class RectangleTest {
   }
   @Test
     public void testWidth() {
-      assertEquals(myRectangle.width, 6);
+      assertEquals(myRectangle.width, 8);
   }
 
 }
